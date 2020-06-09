@@ -1,0 +1,78 @@
+/* Homepage style */
+
+.homeContent .labelWorkOrder {
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	height: 28px;
+    font-size: 22px;
+    padding: 4px;
+}
+
+.homeContent .homeFlexContainer {
+	margin-top: 50px;
+}
+
+.homeContent .buttonSubmit {
+	margin-left: 25px;
+}
+
+.homeContent .buttonStartScan {
+	transition: all .2s;
+}
+
+.homeContent .buttonStartScan .sapMBtnInner {
+	height: 55px;
+    width: 70px;
+    margin-top: 50px;
+}
+
+.homeContent .buttonStartScan .sapMBtnInner img {
+	width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: none;
+    max-height: none;
+}
+
+.homeContent .buttonSubmit:hover span {
+	background-color: #32CD32;
+	color: #fff;
+}
+
+.homeContent .buttonStartScan:hover {
+	transform: scale(1.1);
+}
+
+.sapMMessageToast {
+	background: green !important;
+}
+
+/* Infopage style */
+
+.infoContent .infoOuterContainer {
+	width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.infoContent .infoInnerContainer {
+	width: 550px;
+    height: 280px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.infoContent .labelHeader {
+	font-size: 30px;
+	color: #000;
+}
+
+.infoContent .labelCode {
+	font-size: 20px;
+}

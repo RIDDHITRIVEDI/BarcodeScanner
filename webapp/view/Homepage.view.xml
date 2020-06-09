@@ -1,0 +1,30 @@
+<mvc:View height="100%" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="barcode.scanner.BarcodeScanner.controller.Homepage"
+	displayBlock="true">
+	<Shell id="shell">
+		<App id="app" class="homeContent">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Label class="labelWorkOrder" text="Work Order" textAlign="Center"></Label>
+						<FlexBox class="homeFlexContainer" alignItems="Center" justifyContent="Center">
+							<items>
+								<Input xmlns="sap.m" class="inputCode" id="inputData" fieldWidth="" placeholder="Barcode Data" width="380px"/>
+								<Button xmlns="sap.m" class="buttonSubmit" text="Submit" press="onSubmit" width="100px"/>
+							</items>
+						</FlexBox>
+						<FlexBox width="100%" id="box1" alignItems="Center" justifyContent="Center">
+							<items>
+								<Button xmlns="sap.m" class="buttonStartScan" press="onScanStart" icon="image/icon/barcode-icon.png"/>
+							</items>
+						</FlexBox>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<Label text="@Riddhi Trivedi" textAlign="Center"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

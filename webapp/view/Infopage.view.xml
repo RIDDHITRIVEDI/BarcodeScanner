@@ -1,0 +1,24 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="barcode.scanner.BarcodeScanner.controller.Infopage">
+	<App class="infoContent">
+		<pages>
+			<Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<Label class="labelWorkOrder" text="Work Order" textAlign="Center"/>
+					<FlexBox class="infoOuterContainer">
+						<FlexBox class="infoInnerContainer">
+							<Label class="labelHeader" text="Barcode Data"/>
+							<core:Icon src="sap-icon://bar-code" size="4rem" class="sapUiMediumMargin"/>
+							<Label id="labelBarcodeData" class="labelCode" text=""/>
+						</FlexBox>
+					</FlexBox>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<Label text="@Riddhi Trivedi" textAlign="Center"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

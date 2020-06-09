@@ -1,0 +1,109 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "barcode.scanner.BarcodeScanner",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "barcode.scanner.BarcodeScanner.view.Homepage",
+			"type": "XML",
+			"async": true,
+			"id": "Homepage"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "barcode.scanner.BarcodeScanner.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "lib/quagga/quagga.min.js"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "barcode.scanner.BarcodeScanner.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "RouteHomepage",
+					"target": "TargetHomepage"
+				},
+				{
+					"pattern": "RouteInfopage/{value}",
+					"name": "RouteInfopage",
+					"target": "Infopage"
+				}
+			],
+			"targets": {
+				"TargetHomepage": {
+					"viewType": "XML",
+					"viewName": "Homepage",
+					"transition": "slide"
+				},
+				"Infopage": {
+					"viewType": "XML",
+					"viewName": "Infopage",
+					"transition": "flip"
+				}
+			}
+		}
+	}
+}
